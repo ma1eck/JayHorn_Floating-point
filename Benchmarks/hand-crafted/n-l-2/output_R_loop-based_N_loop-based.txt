@@ -1,0 +1,133 @@
+
+
+=== RUN 1 / 1 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+[root] - Safety Verification ... 
+[root] - Trying to verify with max explicit heap size 10
+[root] - ======== Round 1: heap size 1
+[root] - - Searching for counterexamples ...
+[root] - Hornify  ... 
+[root] - Transform Program Methods into Horn Clauses ... 
+[root] - Running from entry point: <Main: void main(JayArray_java_lang_String)>
+
+------------------------------- Preprocessing ----------------------------------
+                                                       #clauses  #relation syms
+Initially:                                             92        58
+After eliminating fwd/bwd unreachable clauses (8ms):   87        54
+After partial evaluation (124ms):                      87        54
+After constraint simplification (78ms):                80        54
+After clause inlining (80ms):                          34        8
+After equality propagation (74ms):                     34        8
+After constant propagation (25ms):                     34        8
+After inlining ADT constructors (138ms):               34        8
+After constraint simplification (274ms):               29        8
+After clause inlining (2ms):                           29        8
+After eliminating fwd/bwd unreachable clauses (1ms):   29        8
+After slicing (35ms):                                  29        8
+After equality propagation (14ms):                     29        8
+After constant propagation (11ms):                     29        8
+After constraint simplification (63ms):                29        8
+After clause inlining (1ms):                           29        8
+After eliminating fwd/bwd unreachable clauses (1ms):   29        8
+After slicing (2ms):                                   29        8
+After Boolean clause splitting (432ms):                39        8
+After equality propagation (18ms):                     39        8
+After constant propagation (7ms):                      39        8
+After constraint simplification (72ms):                37        8
+After clause inlining (2ms):                           37        8
+After eliminating fwd/bwd unreachable clauses (2ms):   37        8
+After slicing (3ms):                                   37        8
+After equality propagation (7ms):                      37        8
+After constant propagation (6ms):                      37        8
+After constraint simplification (20ms):                36        8
+After clause inlining (2ms):                           36        8
+After eliminating fwd/bwd unreachable clauses (1ms):   36        8
+After slicing (3ms):                                   36        8
+After equality propagation (20ms):                     36        8
+After constant propagation (6ms):                      36        8
+After constraint simplification (40ms):                36        8
+After clause inlining (1ms):                           36        8
+After eliminating fwd/bwd unreachable clauses (1ms):   36        8
+After slicing (6ms):                                   36        8
+After cloning of relation symbols (39ms):              36        9
+After equality propagation (7ms):                      36        9
+After constant propagation (9ms):                      36        9
+After constraint simplification (21ms):                36        9
+After clause inlining (2ms):                           34        7
+After eliminating fwd/bwd unreachable clauses (1ms):   34        7
+After slicing (3ms):                                   34        7
+After equality propagation (12ms):                     34        7
+After constant propagation (8ms):                      34        7
+After constraint simplification (17ms):                34        7
+After clause inlining (2ms):                           34        7
+After eliminating fwd/bwd unreachable clauses (1ms):   34        7
+After slicing (3ms):                                   34        7
+After shortening of clauses (1ms):                     34        7
+
+Total preprocessing time (ms): 1825
+
+Theories: Types, GroebnerMultiplicationValueEnumerator, GroebnerMultiplication, ModuloArithmetic, ADT(DoubleFloatingPoint)
+State hashing enabled
+Forward  constant and interval propagation +++++++++++++++++++++++++++++++++
+
+Backward constant and interval propagation +++++++++++++
+
+Unique satisfiable clauses: 21
+   2 clauses with 0 body literals
+   19 clauses with 1 body literals
+
+Starting CEGAR ...
+....................
+Found counterexample #1, refining ... (6and/0or)  100 -> 100 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_3_12_exp: <Main: void main(JayArray_java_lang_String)>_Block4_3_12_exp_1_0 = 0
+<Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp_1_0 = 0
+...............
+Found counterexample #2, refining ... (6and/0or)  94 -> 94 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_3_12_exp: <Main: void main(JayArray_java_lang_String)>_Block4_3_12_exp_4_0 = 0
+............
+Found counterexample #3, refining ... (7and/0or)  119 -> 119 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_3_16_exp: <Main: void main(JayArray_java_lang_String)>_Block4_3_16_exp_1_0 = 1027.\as[bv[12]]
+<Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp: <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_3_0 = 0.\as[bv[53]], <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_1_0 = 1027.\as[bv[12]]
+<Main: void main(JayArray_java_lang_String)>_Block4_3_12_exp: <Main: void main(JayArray_java_lang_String)>_Block4_3_12_exp_5_0 = 1027.\as[bv[11]]
+.............
+Found counterexample #4, refining ... (7and/0or)  117 -> 117 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_3_12_exp: <Main: void main(JayArray_java_lang_String)>_Block4_3_12_exp_2_0 = 1027.\as[bv[11]]
+............
+Found counterexample #5, refining ... (8and/0or)  139 -> 139 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_3_16_exp: \exists int v0, v1, v2; !(!(v1 != 1 & <Main: void main(JayArray_java_lang_String)>_Block4_3_16_exp_2_0[104:104] = v1) & !(v0 != 1 & <Main: void main(JayArray_java_lang_String)>_Block4_3_16_exp_2_0[105:105] = v0) & !(-1 >= v2 & <Main: void main(JayArray_java_lang_String)>_Block4_3_16_exp_2_0[156:106] = v2) & !(v2 >= 2251799813685248 & <Main: void main(JayArray_java_lang_String)>_Block4_3_16_exp_2_0[156:106] = v2))
+<Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp: !(!(<Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0 = 171269723124715206009403919985609840313180880896.\as[bv[159]] & <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_1_0.\as[int] >= 1027) & !(353957427791078050502454920423474793822921162752 >= <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0.\as[int] & <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0.\as[int] >= 262613575457896628255929420204542317068051021824 & <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_1_0.\as[int] >= 1027) & !(262613575457896618114724618378707105094425378816 >= <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0.\as[int] & <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0.\as[int] >= 40564819207303340847894502572032 & <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_1_0.\as[int] >= 1027 & !\forall int v0; <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0.\as[int] != -40564819207303340847894502572032*v0) & !(262613575457896618114724618378707105094425378816 >= <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0.\as[int] & <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0.\as[int] >= 20282409603651670423947251286016 & <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_1_0.\as[int] >= 1027 & !\forall int v0; <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0.\as[int] != -20282409603651670423947251286016*v0)), <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_1_0.\as[int] >= 1027, \exists int v0, v1, v2, v3; !(!(v2 != 1 & <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0[104:104] = v2) & !(v1 != 1 & <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0[105:105] = v1) & !(v0 != 1 & <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0[157:157] = v0) & !(-1 >= v3 & <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0[156:106] = v3) & !(v3 >= 2251799813685248 & <Main: void main(JayArray_java_lang_String)>_Block4_3_13_15_exp_2_0[156:106] = v3))
+<Main: void main(JayArray_java_lang_String)>_Block4_3_12_exp: <Main: void main(JayArray_java_lang_String)>_Block4_3_12_exp_6_0 = 8725724278030336.\as[bv[53]], <Main: void main(JayArray_java_lang_String)>_Block4_3_12_exp_5_0.\as[int] >= 1027, <Main: void main(JayArray_java_lang_String)>_Block4_3_12_exp_3_0.\as[int] >= 4503599627370496
+<Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp: !(<Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp_2_0 != 1.\as[bv[11]] & 4503599627370495 >= <Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp_3_0.\as[int])
+..............
+Found counterexample #6, refining ... (8and/0or)  ... failed, counterexample is genuine
+
+--------------------------------- Statistics -----------------------------------
+CEGAR iterations:                                      6
+Total CEGAR time (ms):                                 17709
+Setup time (ms):                                       3263
+Final number of abstract states:                       8
+Final number of matched abstract states:               11
+Final number of abstract edges:                        16
+Number of generated predicates:                        16
+Average predicate size (# of sub-formulas):            2.81
+Predicate generation time (ms):                        8033
+Number of implication checks:                          161
+
+Number of implication checks (setup):                  92
+Number of implication checks (positive):               47
+Number of implication checks (negative):               22
+Time for implication checks (setup, ms):               3529
+Time for implication checks (positive, ms):            1835
+Time for implication checks (negative, ms):            478
+
+Number of models in hasher:                            11
+Number of hasher evals:                                438
+Time for hasher eval:                                  202
+Hasher hits/misses:                                    53/76 (41%)
+--------------------------------------------------------------------------------
+
+Eldarica takes 19556ms to check the given benchmark!
+[root] - Program is UNSAFE
+UNSAFE

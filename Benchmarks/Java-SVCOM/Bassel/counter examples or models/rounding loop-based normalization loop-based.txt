@@ -1,0 +1,574 @@
+Total rules: 185
+
+Predicate: Main_void_mainJayArray_java_lang_String_pre
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_post
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_clinit_pre
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_clinit_post
+Levels explored: 0
+Final invariant: true
+
+Predicate: JayHornAssertions_void_clinit_pre
+Levels explored: 0
+Final invariant: true
+
+Predicate: JayHornAssertions_void_clinit_post
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_pre
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_post
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block3
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block2
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block4
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block0
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_2
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_3
+Levels explored: 0
+Final invariant: true
+
+Predicate: inv_JayArray_java_lang_String_103
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_4
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_5
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_6
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_7-FAssumeResult
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_6_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_8
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_9
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_10
+Levels explored: 0
+Final invariant: true
+
+Predicate: Assert_#0_Main.java,_line_18
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_13
+Levels explored: 0
+Final invariant: true
+
+Predicate: Assert_#1_Main.java,_line_20
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_14-FCmpResult
+Levels explored: 6
+Final invariant: (and (not (sign Main_void_mainJayArray_java_lang_String_Block1_14-FCmpResult!slice!209_2_n))
+     (not (= (exponent Main_void_mainJayArray_java_lang_String_Block1_14-FCmpResult!slice!209_2_n)
+             #b01111111100))
+     (or (not (>= Main_void_mainJayArray_java_lang_String_Block1_14-FCmpResult!slice!209_1_n
+                  0))
+         (bvule #b01111111100
+                (exponent Main_void_mainJayArray_java_lang_String_Block1_14-FCmpResult!slice!209_2_n))))
+  Level 0: true
+  Level 1: false
+  Level 2: true
+  Level 3: true
+  Level 4: true
+  Level 5: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_13_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block1_13_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block3_1-FCmpResult
+Levels explored: 6
+Final invariant: (not (<= Main_void_mainJayArray_java_lang_String_Block3_1-FCmpResult!slice!208_2_n
+         0))
+  Level 0: true
+  Level 1: true
+  Level 2: false
+  Level 3: true
+  Level 4: true
+  Level 5: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block3_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block3_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_mainJayArray_java_lang_String_Block4_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Assert_#2_Main.java,_line_21
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_clinit_Block1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_clinit_Block0
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_clinit_Block1_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_clinit_Block1_2
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_void_clinit_Block1_3
+Levels explored: 0
+Final invariant: true
+
+Predicate: inv_$StaticFields_Main_2
+Levels explored: 0
+Final invariant: true
+
+Predicate: JayHornAssertions_void_clinit_Block0
+Levels explored: 0
+Final invariant: true
+
+Predicate: JayHornAssertions_void_clinit_Block1
+Levels explored: 0
+Final invariant: true
+
+Predicate: JayHornAssertions_void_clinit_Block1_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: JayHornAssertions_void_clinit_Block1_2
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block7
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block18
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block4
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block8
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block17
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block6
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block9
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block3
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block20
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block15
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block19
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block21
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block5
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block2
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block13
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block16
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block10
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block14
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block0
+Levels explored: 6
+Final invariant: (let ((a!1 (or (bvule #b01111111100
+                      (exponent Main_double_bessely0testdouble_Block0!slice!206_5_n))
+               (not (bvule #b10100000000000000000000000000000000000000000000000000
+                           (mantissa Main_double_bessely0testdouble_Block0!slice!206_3_n))))))
+  (and (not (sign Main_double_bessely0testdouble_Block0!slice!206_5_n))
+       (not (= (exponent Main_double_bessely0testdouble_Block0!slice!206_5_n)
+               #b01111111100))
+       a!1
+       (or (bvule #b01111111100
+                  (exponent Main_double_bessely0testdouble_Block0!slice!206_5_n))
+           (= (exponent Main_double_bessely0testdouble_Block0!slice!206_3_n)
+              #b01111111111))))
+  Level 0: false
+  Level 1: true
+  Level 2: true
+  Level 3: true
+  Level 4: true
+  Level 5: true
+
+Predicate: Main_double_bessely0testdouble_Block1_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block1_2
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block1_3-FCmpResult
+Levels explored: 5
+Final invariant: (let ((a!1 (or (not (<= Main_double_bessely0testdouble_Block1_3-FCmpResult!slice!211_5_n
+                        0))
+               (not (= (DoubleFloatingPoint
+                         false
+                         #b01111111111
+                         #b10100000000000000000000000000000000000000000000000000
+                         false
+                         false)
+                       Main_double_bessely0testdouble_Block1_3-FCmpResult!slice!211_9_n))))
+      (a!2 (or (not (= Main_double_bessely0testdouble_Block1_3-FCmpResult!slice!211_5_n
+                       0))
+               (not (bvule #b10100000000000000000000000000000000000000000000000000
+                           (mantissa Main_double_bessely0testdouble_Block1_3-FCmpResult!slice!211_9_n))))))
+  (and a!1
+       (or (not (= Main_double_bessely0testdouble_Block1_3-FCmpResult!slice!211_5_n
+                   0))
+           (= (exponent Main_double_bessely0testdouble_Block1_3-FCmpResult!slice!211_9_n)
+              #b01111111111))
+       a!2))
+  Level 0: true
+  Level 1: true
+  Level 2: true
+  Level 3: true
+  Level 4: true
+
+Predicate: Main_double_bessely0testdouble_Block1_2_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block1_2_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block2_1-FCmpResult
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block2_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block2_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block3_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block4_1-FCmpResult
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block4_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block4_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block5_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block6_1-FCmpResult
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block6_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block6_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block7_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block8_1-FCmpResult
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block8_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block8_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block9_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block10_1-FCmpResult
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block10_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block10_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block11_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block12_1-FCmpResult
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block12_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block12_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block13_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block14_1-FCmpResult
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block14_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block14_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block15_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block16_1-FCmpResult
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block16_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block16_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block17_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block18_1-FCmpResult
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block18_11
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block18_12
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block19_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block20_1
+Levels explored: 0
+Final invariant: true
+
+Predicate: Main_double_bessely0testdouble_Block21_1
+Levels explored: 0
+Final invariant: true
+
+Statistics:
+(:SPACER-inductive-level               3
+ :SPACER-max-depth                     11
+ :SPACER-max-query-lvl                 4
+ :SPACER-num-active-lemmas             15
+ :SPACER-num-ctp-blocked               7
+ :SPACER-num-invariants                13
+ :SPACER-num-is_invariant              12
+ :SPACER-num-lemmas                    89
+ :SPACER-num-pobs                      13
+ :SPACER-num-queries                   72
+ :added-eqs                            158910
+ :arith-add-rows                       41
+ :arith-assert-diseq                   457
+ :arith-assert-lower                   2944
+ :arith-assert-upper                   2797
+ :arith-bound-prop                     11
+ :arith-conflicts                      56
+ :arith-eq-adapter                     2046
+ :arith-fixed-eqs                      158
+ :arith-offset-eqs                     363
+ :arith-pivots                         102
+ :bool-inductive-gen                   12
+ :bool-inductive-gen-failures          21
+ :bv-bit2core                          484707
+ :bv-conflicts                         2
+ :bv-dynamic-diseqs                    3156
+ :bv-dynamic-eqs                       52
+ :bv->core-eq                          58946
+ :conflicts                            1529
+ :datatype-accessor-ax                 180
+ :datatype-constructor-ax              112
+ :datatype-occurs-check                4619
+ :decisions                            343746
+ :del-clause                           5180
+ :final-checks                         514
+ :iuc_solver.num_proxies               214
+ :max-memory                           62.80
+ :memory                               61.49
+ :minimized-lits                       3
+ :mk-bool-var                          45747
+ :mk-clause                            23699
+ :num-allocs                           873776503
+ :num-checks                           1514
+ :pool_solver.checks                   1139
+ :pool_solver.checks.sat               311
+ :propagations                         136497
+ :rlimit-count                         4203529
+ :time.iuc_solver.get_iuc              0.02
+ :time.iuc_solver.get_iuc.hyp_reduce2  0.00
+ :time.pool_solver.proof               0.04
+ :time.pool_solver.smt.total           2.07
+ :time.pool_solver.smt.total.sat       1.54
+ :time.spacer.init_rules               0.11
+ :time.spacer.init_rules.pt.init       0.00
+ :time.spacer.mbp                      0.03
+ :time.spacer.solve                    2.30
+ :time.spacer.solve.propagate          0.26
+ :time.spacer.solve.reach              2.04
+ :time.spacer.solve.reach.children     0.09
+ :time.spacer.solve.reach.gen.bool_ind 0.99)
