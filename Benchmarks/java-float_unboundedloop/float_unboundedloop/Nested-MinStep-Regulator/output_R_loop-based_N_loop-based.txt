@@ -2,63 +2,127 @@
 
 === RUN 1 / 1 ===
 [root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
-[root] - Horn solver: spacer
+[root] - Horn solver: eldarica
 [root] - Building CFG  ... 
 [root] - Safety Verification ... 
+[root] - Trying to verify with max explicit heap size 10
+[root] - ======== Round 1: heap size 1
+[root] - - Searching for counterexamples ...
 [root] - Hornify  ... 
 [root] - Transform Program Methods into Horn Clauses ... 
 [root] - Running from entry point: <Main: void main(JayArray_java_lang_String)>
-[root] - Checking properties
-Failed to find a lemma for: (not (eisNan Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n))
-Available lemmas are: 1: (esign Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)
-2: (and (not (eisNan Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n))
-     (not (eisInfinity Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-3: (or (not ((_ bit2bool 0)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 1)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 2)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 3)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 4)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 5)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 6)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 7)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 8)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 9)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 10)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n))))
-Simplified goal is:
-0: (esign Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)
-1: (not (eisNan Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n))
-2: (not (eisInfinity Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n))
-3: (or (not ((_ bit2bool 0)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 1)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 2)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 3)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 4)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 5)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 6)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 7)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 8)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 9)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n)))
-    (not ((_ bit2bool 10)
-           (eexponent Main_void_mainJayArray_java_lang_String_Block9_16!slice!2_7_n))))
-Failed to verify: found
+
+------------------------------- Preprocessing ----------------------------------
+                                                       #clauses  #relation syms
+Initially:                                             142       76
+After eliminating fwd/bwd unreachable clauses (13ms):  137       72
+After partial evaluation (99ms):                       137       72
+After constraint simplification (134ms):               122       72
+After clause inlining (91ms):                          68        18
+After equality propagation (71ms):                     68        18
+After constant propagation (42ms):                     68        18
+After inlining ADT constructors (81ms):                68        18
+After constraint simplification (296ms):               67        18
+After clause inlining (1ms):                           67        18
+After eliminating fwd/bwd unreachable clauses (1ms):   67        18
+After slicing (35ms):                                  67        18
+After equality propagation (20ms):                     67        18
+After constant propagation (30ms):                     67        18
+After constraint simplification (53ms):                67        18
+After clause inlining (0ms):                           67        18
+After eliminating fwd/bwd unreachable clauses (2ms):   67        18
+After slicing (2ms):                                   67        18
+After Boolean clause splitting (312ms):                82        18
+After equality propagation (10ms):                     82        18
+After constant propagation (13ms):                     82        18
+After constraint simplification (27ms):                82        18
+After clause inlining (1ms):                           82        18
+After eliminating fwd/bwd unreachable clauses (0ms):   82        18
+After slicing (4ms):                                   82        18
+After cloning of relation symbols (18ms):              82        18
+After shortening of clauses (1ms):                     82        18
+
+Total preprocessing time (ms): 1451
+
+Theories: Types, GroebnerMultiplicationValueEnumerator, GroebnerMultiplication, ModuloArithmetic, ADT(DoubleFloatingPoint)
+State hashing enabled
+Forward  constant and interval propagation ++++++++++++++++
+
+Backward constant and interval propagation 
+
+Unique satisfiable clauses: 0
+
+Starting CEGAR ...
+
+
+--------------------------------- Statistics -----------------------------------
+CEGAR iterations:                                      0
+Total CEGAR time (ms):                                 1327
+Setup time (ms):                                       1322
+Final number of abstract states:                       0
+Final number of matched abstract states:               0
+Final number of abstract edges:                        0
+Number of generated predicates:                        0
+Average predicate size (# of sub-formulas):            0.00
+Predicate generation time (ms):                        0
+Number of implication checks:                          0
+
+Number of implication checks (setup):                  0
+Number of implication checks (positive):               0
+Number of implication checks (negative):               0
+Time for implication checks (setup, ms):               0
+Time for implication checks (positive, ms):            0
+Time for implication checks (negative, ms):            0
+
+Number of models in hasher:                            3
+Number of hasher evals:                                0
+Time for hasher eval:                                  0
+Hasher hits/misses:                                    0/0 (0%)
+--------------------------------------------------------------------------------
+
+Eldarica takes 2844ms to check the given benchmark!
+[root] - No counterexamples, checking heap bounds ...
+[root] - Hornify  ... 
+[root] - Transform Program Methods into Horn Clauses ... 
+[root] - Running from entry point: <Main: void main(JayArray_java_lang_String)>
+
+------------------------------- Preprocessing ----------------------------------
+                                                       #clauses  #relation syms
+Initially:                                             138       74
+After eliminating fwd/bwd unreachable clauses (1ms):   0         0
+
+Total preprocessing time (ms): 1
+
+Theories: Types
+Forward  constant and interval propagation 
+
+Backward constant and interval propagation 
+
+Unique satisfiable clauses: 0
+
+Starting CEGAR ...
+
+
+--------------------------------- Statistics -----------------------------------
+CEGAR iterations:                                      0
+Total CEGAR time (ms):                                 1
+Setup time (ms):                                       1
+Final number of abstract states:                       0
+Final number of matched abstract states:               0
+Final number of abstract edges:                        0
+Number of generated predicates:                        0
+Average predicate size (# of sub-formulas):            0.00
+Predicate generation time (ms):                        0
+Number of implication checks:                          0
+
+Number of implication checks (setup):                  0
+Number of implication checks (positive):               0
+Number of implication checks (negative):               0
+Time for implication checks (setup, ms):               0
+Time for implication checks (positive, ms):            0
+Time for implication checks (negative, ms):            0
+--------------------------------------------------------------------------------
+
+Eldarica takes 3ms to check the given benchmark!
+[root] - Program is bounded and therefore SAFE
+SAFE

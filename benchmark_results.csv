@@ -1,5 +1,5 @@
 Benchmark Name,Rounding,Normalization,Total Time (ms),Result,Solver Time (ms)
-Batch-Conveyor-Counter,loop-based,loop-based,7446.71,SAFE,10.0
-Batch-Conveyor-Counter,loop-based,loop-free,9350.73,SAFE,4.0
-Batch-Conveyor-Counter,loop-free,loop-based,9100.76,SAFE,3.0
-Batch-Conveyor-Counter,loop-free,loop-free,8623.31,SAFE,3.0
+Batch-Conveyor-Counter,loop-based,loop-based,14173.58,SAFE,11061.0
+Batch-Conveyor-Counter,loop-based,loop-free,15141.94,SAFE,12413.0
+Batch-Conveyor-Counter,loop-free,loop-based,13710.6,SAFE,10790.0
+Batch-Conveyor-Counter,loop-free,loop-free,13993.28,SAFE,10142.0

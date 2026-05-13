@@ -91,7 +91,7 @@ def run_single_benchmark(task_info, args):
                 
                 solver_time_ms = None
                 for line in run_stdout.splitlines():
-                    if "takes" in line:
+                    if "takes" in line and solver_time_ms == None: 
                         match = re.search(r'takes\s+([\d.]+)', line)
                         if match:
                             solver_time_ms = float(match.group(1)) # Assuming time is already in ms
