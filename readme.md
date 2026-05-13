@@ -137,8 +137,10 @@ java -Xss1024m -XX:-UseGCOverheadLimit -Xmx13g "-Djava.library.path=.\native_lib
 
 Comprehensive results are provided in the Appendices of the paper.
 
-**For reproduction ** - Experiments ran on an AMD Ryzen 9 7845HX (12 cores, 24 threads, 3 GHz) with 16 GB DDR5 RAM - Timeout should be set to 3,600 seconds (1 hour). - Please note that the estimated execution time for all benchmarks across various strategies using JayHorn (Eldarica (SymEx, CEGAR) and Spacer is approximately two weeks. - To produce RQ1 results : - Results
-`bash  	     python benchmark_runner.py --benchmarks-dirs ".\Benchmarks\hand-crafted" --timeout 1800 --max-workers 1 --solver eldarica --symex 		 `
+For reproduction  - Experiments ran on an AMD Ryzen 9 7845HX (12 cores, 24 threads, 3 GHz) with 16 GB DDR5 RAM - Timeout should be set to 3,600 seconds (1 hour). - Please note that the estimated execution time for all benchmarks across various strategies using JayHorn (Eldarica (SymEx, CEGAR) and Spacer is approximately two weeks. - To produce RQ1 results : - Results
+```bash  	     
+python benchmark_runner.py --benchmarks-dirs ".\Benchmarks\hand-crafted" --timeout 1800 --max-workers 1 --solver eldarica --symex
+```
 The results are produced in benchmark_results.csv as default
 
     ### Generating Figure 6: Scatter Plot
