@@ -141,17 +141,17 @@ def parse_arguments():
     parser.add_argument(
         '--benchmarks-dirs',
         nargs='+',
-        default=[r"./examples/benchmarks"],
+        default=[os.path.join(".", "examples", "benchmarks")],
         help="List of directories containing benchmarks."
     )
     parser.add_argument(
         '--native-lib',
-        default=r".\native_lib",
+        default=os.path.join(".", "native_lib"),
         help="Path to the directory containing native libraries (e.g., Z3)."
     )
     parser.add_argument(
         '--jayhorn-jar',
-        default=r".\jayhorn.jar",
+        default=os.path.join(".", "jayhorn.jar"),
         help="Path to the JayHorn JAR file."
     )
     parser.add_argument(
@@ -177,7 +177,6 @@ def parse_arguments():
             f"Default: {LOOP_BASED} {LOOP_FREE}"
         )
     )
-
     parser.add_argument(
         '--rounding-encoding',
         nargs='+',  
@@ -291,7 +290,10 @@ def main():
         except KeyboardInterrupt:
             print("\nCtrl+C detected. Terminating workers...")
             # cancel_futures is available in Python 3.9+
-            executor.shutdown(wait=False, cancel_futures=True)
+            try:
+                executor.shutdown(wait=False, cancel_futures=True)
+            except TypeError: # For Python versions older than 3.9
+                executor.shutdown(wait=False)
             print("Workers terminated.")
             return
 
