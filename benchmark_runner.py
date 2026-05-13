@@ -47,7 +47,7 @@ def run_single_benchmark(task_info, args):
         "-rounding-encoding", rounding_enc,
         "-normalization-encoding", norm_enc,
         "-solver", args.solver,
-        "-heap-mode", "bounded"
+        "-heap-mode", "unbounded"
     ]
     
     if args.symex:
