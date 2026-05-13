@@ -15,34 +15,34 @@
 ------------------------------- Preprocessing ----------------------------------
                                                        #clauses  #relation syms
 Initially:                                             142       78
-After eliminating fwd/bwd unreachable clauses (15ms):  137       74
-After partial evaluation (108ms):                      137       74
-After constraint simplification (132ms):               122       74
-After clause inlining (93ms):                          64        16
-After equality propagation (66ms):                     64        16
-After constant propagation (36ms):                     64        16
-After inlining ADT constructors (83ms):                64        16
-After constraint simplification (259ms):               63        16
-After clause inlining (1ms):                           63        16
-After eliminating fwd/bwd unreachable clauses (1ms):   63        16
-After slicing (36ms):                                  63        16
-After equality propagation (20ms):                     63        16
-After constant propagation (14ms):                     63        16
-After constraint simplification (40ms):                63        16
-After clause inlining (1ms):                           63        16
+After eliminating fwd/bwd unreachable clauses (0ms):   137       74
+After partial evaluation (63ms):                       137       74
+After constraint simplification (79ms):                122       74
+After clause inlining (48ms):                          64        16
+After equality propagation (39ms):                     64        16
+After constant propagation (22ms):                     64        16
+After inlining ADT constructors (47ms):                64        16
+After constraint simplification (83ms):                63        16
+After clause inlining (0ms):                           63        16
 After eliminating fwd/bwd unreachable clauses (0ms):   63        16
-After slicing (4ms):                                   63        16
-After Boolean clause splitting (324ms):                78        16
-After equality propagation (11ms):                     78        16
-After constant propagation (12ms):                     78        16
-After constraint simplification (34ms):                78        16
-After clause inlining (3ms):                           78        16
-After eliminating fwd/bwd unreachable clauses (1ms):   78        16
-After slicing (4ms):                                   78        16
-After cloning of relation symbols (18ms):              78        16
+After slicing (22ms):                                  63        16
+After equality propagation (0ms):                      63        16
+After constant propagation (0ms):                      63        16
+After constraint simplification (0ms):                 63        16
+After clause inlining (0ms):                           63        16
+After eliminating fwd/bwd unreachable clauses (0ms):   63        16
+After slicing (16ms):                                  63        16
+After Boolean clause splitting (221ms):                78        16
+After equality propagation (0ms):                      78        16
+After constant propagation (16ms):                     78        16
+After constraint simplification (15ms):                78        16
+After clause inlining (0ms):                           78        16
+After eliminating fwd/bwd unreachable clauses (0ms):   78        16
+After slicing (0ms):                                   78        16
+After cloning of relation symbols (16ms):              78        16
 After shortening of clauses (0ms):                     78        16
 
-Total preprocessing time (ms): 1400
+Total preprocessing time (ms): 775
 
 Theories: Types, GroebnerMultiplicationValueEnumerator, GroebnerMultiplication, ModuloArithmetic, ADT(DoubleFloatingPoint)
 State hashing enabled
@@ -57,8 +57,8 @@ Starting CEGAR ...
 
 --------------------------------- Statistics -----------------------------------
 CEGAR iterations:                                      0
-Total CEGAR time (ms):                                 1331
-Setup time (ms):                                       1326
+Total CEGAR time (ms):                                 1073
+Setup time (ms):                                       1067
 Final number of abstract states:                       0
 Final number of matched abstract states:               0
 Final number of abstract edges:                        0
@@ -80,7 +80,7 @@ Time for hasher eval:                                  0
 Hasher hits/misses:                                    0/0 (0%)
 --------------------------------------------------------------------------------
 
-Eldarica takes 2783ms to check the given benchmark!
+Eldarica takes 1897ms to check the given benchmark!
 [root] - No counterexamples, checking heap bounds ...
 [root] - Hornify  ... 
 [root] - Transform Program Methods into Horn Clauses ... 
@@ -89,9 +89,9 @@ Eldarica takes 2783ms to check the given benchmark!
 ------------------------------- Preprocessing ----------------------------------
                                                        #clauses  #relation syms
 Initially:                                             138       76
-After eliminating fwd/bwd unreachable clauses (1ms):   0         0
+After eliminating fwd/bwd unreachable clauses (0ms):   0         0
 
-Total preprocessing time (ms): 2
+Total preprocessing time (ms): 0
 
 Theories: Types
 Forward  constant and interval propagation 
@@ -105,8 +105,8 @@ Starting CEGAR ...
 
 --------------------------------- Statistics -----------------------------------
 CEGAR iterations:                                      0
-Total CEGAR time (ms):                                 1
-Setup time (ms):                                       1
+Total CEGAR time (ms):                                 3
+Setup time (ms):                                       3
 Final number of abstract states:                       0
 Final number of matched abstract states:               0
 Final number of abstract edges:                        0

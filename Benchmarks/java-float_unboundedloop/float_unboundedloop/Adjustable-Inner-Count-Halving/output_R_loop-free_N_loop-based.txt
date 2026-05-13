@@ -15,34 +15,34 @@
 ------------------------------- Preprocessing ----------------------------------
                                                        #clauses  #relation syms
 Initially:                                             73        56
-After eliminating fwd/bwd unreachable clauses (8ms):   68        52
-After partial evaluation (37ms):                       68        52
-After constraint simplification (50ms):                68        52
-After clause inlining (55ms):                          22        6
-After equality propagation (19ms):                     22        6
-After constant propagation (17ms):                     22        6
-After inlining ADT constructors (27ms):                22        6
-After constraint simplification (56ms):                21        6
-After clause inlining (1ms):                           21        6
-After eliminating fwd/bwd unreachable clauses (1ms):   21        6
-After slicing (20ms):                                  21        6
-After equality propagation (5ms):                      21        6
-After constant propagation (4ms):                      21        6
-After constraint simplification (9ms):                 21        6
+After eliminating fwd/bwd unreachable clauses (16ms):  68        52
+After partial evaluation (47ms):                       68        52
+After constraint simplification (56ms):                68        52
+After clause inlining (50ms):                          22        6
+After equality propagation (26ms):                     22        6
+After constant propagation (14ms):                     22        6
+After inlining ADT constructors (32ms):                22        6
+After constraint simplification (39ms):                21        6
 After clause inlining (0ms):                           21        6
-After eliminating fwd/bwd unreachable clauses (1ms):   21        6
-After slicing (1ms):                                   21        6
-After Boolean clause splitting (195ms):                29        6
-After equality propagation (6ms):                      29        6
-After constant propagation (6ms):                      29        6
-After constraint simplification (20ms):                29        6
-After clause inlining (1ms):                           29        6
-After eliminating fwd/bwd unreachable clauses (0ms):   29        6
-After slicing (1ms):                                   29        6
-After cloning of relation symbols (11ms):              29        6
-After shortening of clauses (1ms):                     29        6
+After eliminating fwd/bwd unreachable clauses (0ms):   21        6
+After slicing (24ms):                                  21        6
+After equality propagation (4ms):                      21        6
+After constant propagation (4ms):                      21        6
+After constraint simplification (8ms):                 21        6
+After clause inlining (0ms):                           21        6
+After eliminating fwd/bwd unreachable clauses (0ms):   21        6
+After slicing (2ms):                                   21        6
+After Boolean clause splitting (210ms):                29        6
+After equality propagation (4ms):                      29        6
+After constant propagation (4ms):                      29        6
+After constraint simplification (12ms):                29        6
+After clause inlining (0ms):                           29        6
+After eliminating fwd/bwd unreachable clauses (2ms):   29        6
+After slicing (2ms):                                   29        6
+After cloning of relation symbols (9ms):               29        6
+After shortening of clauses (0ms):                     29        6
 
-Total preprocessing time (ms): 602
+Total preprocessing time (ms): 609
 
 Theories: Types, GroebnerMultiplicationValueEnumerator, GroebnerMultiplication, ModuloArithmetic, ADT(DoubleFloatingPoint)
 State hashing enabled
@@ -106,30 +106,30 @@ Found counterexample #11, refining ... (21and/0or)  294 -> 294 ... adding predic
 
 --------------------------------- Statistics -----------------------------------
 CEGAR iterations:                                      11
-Total CEGAR time (ms):                                 6965
-Setup time (ms):                                       939
+Total CEGAR time (ms):                                 4815
+Setup time (ms):                                       819
 Final number of abstract states:                       4
 Final number of matched abstract states:               18
 Final number of abstract edges:                        26
 Number of generated predicates:                        28
 Average predicate size (# of sub-formulas):            1.11
-Predicate generation time (ms):                        2994
+Predicate generation time (ms):                        1908
 Number of implication checks:                          1274
 
 Number of implication checks (setup):                  421
 Number of implication checks (positive):               671
 Number of implication checks (negative):               182
-Time for implication checks (setup, ms):               903
-Time for implication checks (positive, ms):            442
-Time for implication checks (negative, ms):            1311
+Time for implication checks (setup, ms):               624
+Time for implication checks (positive, ms):            313
+Time for implication checks (negative, ms):            882
 
 Number of models in hasher:                            39
 Number of hasher evals:                                1449
-Time for hasher eval:                                  147
+Time for hasher eval:                                  88
 Hasher hits/misses:                                    750/254 (74%)
 --------------------------------------------------------------------------------
 
-Eldarica takes 7607ms to check the given benchmark!
+Eldarica takes 5452ms to check the given benchmark!
 [root] - No counterexamples, checking heap bounds ...
 [root] - Hornify  ... 
 [root] - Transform Program Methods into Horn Clauses ... 
@@ -138,9 +138,9 @@ Eldarica takes 7607ms to check the given benchmark!
 ------------------------------- Preprocessing ----------------------------------
                                                        #clauses  #relation syms
 Initially:                                             69        54
-After eliminating fwd/bwd unreachable clauses (1ms):   0         0
+After eliminating fwd/bwd unreachable clauses (0ms):   0         0
 
-Total preprocessing time (ms): 1
+Total preprocessing time (ms): 0
 
 Theories: Types
 Forward  constant and interval propagation 
@@ -154,8 +154,8 @@ Starting CEGAR ...
 
 --------------------------------- Statistics -----------------------------------
 CEGAR iterations:                                      0
-Total CEGAR time (ms):                                 1
-Setup time (ms):                                       1
+Total CEGAR time (ms):                                 4
+Setup time (ms):                                       4
 Final number of abstract states:                       0
 Final number of matched abstract states:               0
 Final number of abstract edges:                        0

@@ -15,40 +15,40 @@
 ------------------------------- Preprocessing ----------------------------------
                                                        #clauses  #relation syms
 Initially:                                             113       66
-After eliminating fwd/bwd unreachable clauses (10ms):  108       62
-After partial evaluation (55ms):                       108       62
-After constraint simplification (93ms):                99        62
-After clause inlining (61ms):                          51        14
-After equality propagation (50ms):                     51        14
-After constant propagation (31ms):                     51        14
-After inlining ADT constructors (60ms):                51        14
-After constraint simplification (155ms):               50        14
-After clause inlining (2ms):                           50        14
-After eliminating fwd/bwd unreachable clauses (1ms):   50        14
-After slicing (14ms):                                  50        14
-After equality propagation (14ms):                     50        14
-After constant propagation (7ms):                      50        14
-After constraint simplification (42ms):                43        14
+After eliminating fwd/bwd unreachable clauses (16ms):  108       62
+After partial evaluation (50ms):                       108       62
+After constraint simplification (76ms):                99        62
+After clause inlining (48ms):                          51        14
+After equality propagation (40ms):                     51        14
+After constant propagation (23ms):                     51        14
+After inlining ADT constructors (48ms):                51        14
+After constraint simplification (69ms):                50        14
+After clause inlining (0ms):                           50        14
+After eliminating fwd/bwd unreachable clauses (0ms):   50        14
+After slicing (10ms):                                  50        14
+After equality propagation (16ms):                     50        14
+After constant propagation (0ms):                      50        14
+After constraint simplification (16ms):                43        14
 After clause inlining (0ms):                           43        14
 After eliminating fwd/bwd unreachable clauses (0ms):   41        13
 After slicing (0ms):                                   41        13
 After equality propagation (0ms):                      41        13
 After constant propagation (0ms):                      41        13
-After constraint simplification (16ms):                41        13
-After clause inlining (16ms):                          41        13
+After constraint simplification (18ms):                41        13
+After clause inlining (0ms):                           41        13
 After eliminating fwd/bwd unreachable clauses (0ms):   41        13
 After slicing (0ms):                                   41        13
-After Boolean clause splitting (138ms):                48        13
-After equality propagation (4ms):                      48        13
-After constant propagation (4ms):                      48        13
-After constraint simplification (16ms):                48        13
+After Boolean clause splitting (125ms):                48        13
+After equality propagation (0ms):                      48        13
+After constant propagation (0ms):                      48        13
+After constraint simplification (19ms):                48        13
 After clause inlining (0ms):                           48        13
 After eliminating fwd/bwd unreachable clauses (0ms):   48        13
-After slicing (0ms):                                   48        13
-After cloning of relation symbols (11ms):              48        13
-After shortening of clauses (2ms):                     48        13
+After slicing (1ms):                                   48        13
+After cloning of relation symbols (0ms):               48        13
+After shortening of clauses (0ms):                     48        13
 
-Total preprocessing time (ms): 872
+Total preprocessing time (ms): 618
 
 Theories: Types, GroebnerMultiplicationValueEnumerator, GroebnerMultiplication, ModuloArithmetic, ADT(DoubleFloatingPoint)
 State hashing enabled
@@ -318,30 +318,30 @@ Found counterexample #54, refining ... (31and/0or)  498 -> 498 ... adding predic
 
 --------------------------------- Statistics -----------------------------------
 CEGAR iterations:                                      54
-Total CEGAR time (ms):                                 19504
-Setup time (ms):                                       937
+Total CEGAR time (ms):                                 17515
+Setup time (ms):                                       842
 Final number of abstract states:                       30
 Final number of matched abstract states:               110
 Final number of abstract edges:                        213
 Number of generated predicates:                        151
 Average predicate size (# of sub-formulas):            1.04
-Predicate generation time (ms):                        2912
+Predicate generation time (ms):                        2937
 Number of implication checks:                          16270
 
 Number of implication checks (setup):                  3304
 Number of implication checks (positive):               6862
 Number of implication checks (negative):               6104
-Time for implication checks (setup, ms):               5634
-Time for implication checks (positive, ms):            1978
-Time for implication checks (negative, ms):            6677
+Time for implication checks (setup, ms):               4595
+Time for implication checks (positive, ms):            1756
+Time for implication checks (negative, ms):            6061
 
 Number of models in hasher:                            47
 Number of hasher evals:                                8670
-Time for hasher eval:                                  254
+Time for hasher eval:                                  320
 Hasher hits/misses:                                    13962/7245 (65%)
 --------------------------------------------------------------------------------
 
-Eldarica takes 20415ms to check the given benchmark!
+Eldarica takes 18189ms to check the given benchmark!
 [root] - No counterexamples, checking heap bounds ...
 [root] - Hornify  ... 
 [root] - Transform Program Methods into Horn Clauses ... 
@@ -384,6 +384,6 @@ Time for implication checks (positive, ms):            0
 Time for implication checks (negative, ms):            0
 --------------------------------------------------------------------------------
 
-Eldarica takes 2ms to check the given benchmark!
+Eldarica takes 3ms to check the given benchmark!
 [root] - Program is bounded and therefore SAFE
 SAFE
