@@ -241,7 +241,6 @@ def parse_arguments():
 def main():
     """Main function to set up and run the benchmarks."""
     args = parse_arguments()
-    print(args)
     
     tasks = []
     benchmarks_to_run = set(args.select)

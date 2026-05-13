@@ -42,30 +42,32 @@ The script is executed via `benchmark_runner.py`. It is recommended to run it in
 
 ### Examples
 
+This section provides examples of running benchmarks on **PowerShell** and **Linux** .
+
 #### PowerShell
 
 To run benchmarks in parallel with an 8-minute timeout and 3 repetitions on eldrica:
 
 ```bash
-python benchmark_runner.py --benchmarks-dirs "./examples/benchmarks" --jayhorn-jar "./jayhorn.jar" --native-lib "./native_libs" --max-workers 3 --timeout 480 --repetitions 3 --solver eldarica --output-csv output_table.csv
+python benchmark_runner.py --benchmarks-dirs ".\Benchmarks\hand-crafted" --jayhorn-jar ".\jayhorn.jar" --native-lib ".\native_libs" --max-workers 3 --timeout 480 --repetitions 3 --solver eldarica --output-csv output_table.csv
 ```
 
 To run Double_div and Double_div_bad benchmarks with loop-free rounding encoding, loop-free and loop-based normalization encoding:
 
 ```bash
-python benchmark_runner.py --rounding-encoding loop-free --normalization-encoding loop-based loop-free --select Double_div Double_div_bad
+python benchmark_runner.py --rounding-encoding loop-free --normalization-encoding loop-based loop-free --select Double_div Double_div_bad --benchmarks-dirs ./Benchmarks/C-SVCOM
 ```
 
 To run benchmarks on symex backend of eldarica and generate counter example or model:
 
 ```bash
-python benchmark_runner.py --solver eldarica --symex --get-cex
+python benchmark_runner.py --solver eldarica --symex --get-cex --benchmarks-dirs ./Benchmarks/C-SVCOM
 ```
 
 To run C-SVCOM, JAVA-SVCOM, and unbounded benchmarks:
 
 ```bash
-python benchmark_runner.py --benchmarks-dirs ".\examples\C-SVCOM" ".\examples\Java-SVCOM" ".\examples\sv-benchmarks-main-java-float_unboundedloop\float_unboundedloop" --timeout 30 --max-workers 1 --solver eldarica
+python benchmark_runner.py --benchmarks-dirs ".\Benchmarks\C-SVCOM" ".\Benchmarks\Java-SVCOM" ".\Benchmarks\java-float_unboundedloop\float_unboundedloop" --timeout 30 --max-workers 1 --solver eldarica
 ```
 
 #### Runing on Linux
@@ -73,12 +75,25 @@ python benchmark_runner.py --benchmarks-dirs ".\examples\C-SVCOM" ".\examples\Ja
 To run benchmarks in parallel with an 8-minute timeout and 3 repetitions on eldrica:
 
 ```bash
-python3 benchmark_runner.py --benchmarks-dirs ".\benchmarks" --jayhorn-jar ".\jayhorn.jar" --native-lib ".\native_libs" --max-workers 3 --timeout 480 --repetitions 3 --solver eldarica --output-csv output_table.csv
+python3 benchmark_runner.py --benchmarks-dirs ./Benchmarks/C-SVCOM/  --jayhorn-jar ./jayhorn.jar --native-lib ./native_lib --max-workers 3 --timeout 480 --repetitions 3 --solver eldarica --output-csv output_table.csv
 ```
 
+To run Double_div and Double_div_bad benchmarks with loop-free rounding encoding, loop-free and loop-based normalization encoding:
+
 ```bash
-python benchmark_runner.py --benchmarks-dirs "./examples/benchmarks" --jayhorn-jar "./jayhorn.jar" --native-lib
-"./native_libs" --max-workers 3 --timeout 480 --repetitions 3 --solver eldarica --output-csv output_table.csv
+python3 benchmark_runner.py --rounding-encoding loop-free --normalization-encoding loop-based loop-free --select Double_div Double_div_bad --benchmarks-dirs ./Benchmarks/C-SVCOM
+```
+
+To run benchmarks on symex backend of eldarica and generate counter example or model:
+
+```bash
+python3 benchmark_runner.py --solver eldarica --symex --get-cex --benchmarks-dirs ./Benchmarks/Java-SVCOM
+```
+
+To run C-SVCOM, JAVA-SVCOM, and unbounded benchmarks:
+
+```bash
+python3 benchmark_runner.py --benchmarks-dirs "./Benchmarks/C-SVCOM" "./Benchmarks/Java-SVCOM" "./Benchmarks/java-loat_unboundedloop/float_unboundedloop" --timeout 30 --max-workers 1 --solver eldarica
 ```
 
 ## Output

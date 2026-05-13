@@ -1,0 +1,67 @@
+
+
+=== RUN 1 / 3 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+[root] - Safety Verification ... 
+[root] - Trying to verify with unbounded heap
+[root] - Hornify  ... 
+[root] - Transform Program Methods into Horn Clauses ... 
+Warning: java.lang.RuntimeException: Wrong argument type: expected (_ BitVec 13) but got (_ BitVec 13) of type (_ BitVec 13)
+java.lang.RuntimeException: Wrong argument type: expected (_ BitVec 13) but got (_ BitVec 13) of type (_ BitVec 13)
+	at jayhorn.solver.princess.PredicateFun.checkArgTypes(PredicateFun.java:53)
+	at jayhorn.solver.princess.PredicateFun.mkExpr(PredicateFun.java:24)
+	at jayhorn.hornify.HornPredicate.instPredicate(HornPredicate.java:34)
+	at jayhorn.hornify.encoder.FloatingPointEncoder.FPMul(FloatingPointEncoder.java:10665)
+	at jayhorn.hornify.encoder.FloatingPointEncoder.handleFloatingPointExpr(FloatingPointEncoder.java:170)
+	at jayhorn.hornify.encoder.StatementEncoder.assignToClause(StatementEncoder.java:246)
+	at jayhorn.hornify.encoder.StatementEncoder.statementToClause(StatementEncoder.java:125)
+	at jayhorn.hornify.encoder.MethodEncoder.blockToHorn(MethodEncoder.java:323)
+	at jayhorn.hornify.encoder.MethodEncoder.blocksToHorn(MethodEncoder.java:202)
+	at jayhorn.hornify.encoder.MethodEncoder.encode(MethodEncoder.java:76)
+	at jayhorn.hornify.Hornify.toHorn(Hornify.java:1329)
+	at jayhorn.checker.EldaricaChecker.generateAndCheckHornClauses(EldaricaChecker.java:189)
+	at jayhorn.checker.EldaricaChecker.checkProgram(EldaricaChecker.java:91)
+	at jayhorn.Main.safetyAnalysis(Main.java:75)
+	at jayhorn.Main.main(Main.java:129)
+Warning: java.lang.RuntimeException: Wrong argument type: expected (_ BitVec 13) but got (_ BitVec 13) of type (_ BitVec 13)
+java.lang.RuntimeException: Wrong argument type: expected (_ BitVec 13) but got (_ BitVec 13) of type (_ BitVec 13)
+	at jayhorn.solver.princess.PredicateFun.checkArgTypes(PredicateFun.java:53)
+	at jayhorn.solver.princess.PredicateFun.mkExpr(PredicateFun.java:24)
+	at jayhorn.hornify.HornPredicate.instPredicate(HornPredicate.java:34)
+	at jayhorn.hornify.encoder.FloatingPointEncoder.FPMul(FloatingPointEncoder.java:10677)
+	at jayhorn.hornify.encoder.FloatingPointEncoder.handleFloatingPointExpr(FloatingPointEncoder.java:170)
+	at jayhorn.hornify.encoder.StatementEncoder.assignToClause(StatementEncoder.java:246)
+	at jayhorn.hornify.encoder.StatementEncoder.statementToClause(StatementEncoder.java:125)
+	at jayhorn.hornify.encoder.MethodEncoder.blockToHorn(MethodEncoder.java:323)
+	at jayhorn.hornify.encoder.MethodEncoder.blocksToHorn(MethodEncoder.java:202)
+	at jayhorn.hornify.encoder.MethodEncoder.encode(MethodEncoder.java:76)
+	at jayhorn.hornify.Hornify.toHorn(Hornify.java:1329)
+	at jayhorn.checker.EldaricaChecker.generateAndCheckHornClauses(EldaricaChecker.java:189)
+	at jayhorn.checker.EldaricaChecker.checkProgram(EldaricaChecker.java:91)
+	at jayhorn.Main.safetyAnalysis(Main.java:75)
+	at jayhorn.Main.main(Main.java:129)
+[root] - Running from entry point: <Main: void main(JayArray_java_lang_String)>
+
+------------------------------- Preprocessing ----------------------------------
+                                                       #clauses  #relation syms
+Initially:                                             121       75
+After eliminating fwd/bwd unreachable clauses (20ms):  114       69
+After partial evaluation (208ms):                      114       69
+After constraint simplification (187ms):               106       69
+
+
+=== RUN 2 / 3 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+
+
+=== RUN 3 / 3 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+[root] - Safety Verification ... 
+[root] - Trying to verify with unbounded heap
+[root] - Hornify  ... 

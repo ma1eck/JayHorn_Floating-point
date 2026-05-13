@@ -1,0 +1,337 @@
+
+
+=== RUN 1 / 3 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+[root] - Safety Verification ... 
+[root] - Trying to verify with unbounded heap
+[root] - Hornify  ... 
+[root] - Transform Program Methods into Horn Clauses ... 
+[root] - Running from entry point: <Main: void main(JayArray_java_lang_String)>
+
+------------------------------- Preprocessing ----------------------------------
+                                                       #clauses  #relation syms
+Initially:                                             65        47
+After eliminating fwd/bwd unreachable clauses (29ms):  58        41
+After partial evaluation (65ms):                       58        41
+After constraint simplification (285ms):               58        41
+After clause inlining (155ms):                         23        6
+After equality propagation (63ms):                     23        6
+After constant propagation (41ms):                     23        6
+After inlining ADT constructors (89ms):                23        6
+After constraint simplification (153ms):               23        6
+After clause inlining (1ms):                           23        6
+After eliminating fwd/bwd unreachable clauses (1ms):   23        6
+After slicing (68ms):                                  23        6
+After Boolean clause splitting (671ms):                54        6
+After equality propagation (16ms):                     54        6
+After constant propagation (25ms):                     54        6
+After constraint simplification (51ms):                53        6
+After clause inlining (1ms):                           53        6
+After eliminating fwd/bwd unreachable clauses (1ms):   53        6
+After slicing (5ms):                                   53        6
+After equality propagation (7ms):                      53        6
+After constant propagation (10ms):                     53        6
+After constraint simplification (24ms):                53        6
+After clause inlining (2ms):                           53        6
+After eliminating fwd/bwd unreachable clauses (1ms):   53        6
+After slicing (6ms):                                   53        6
+After cloning of relation symbols (26ms):              53        6
+After shortening of clauses (2ms):                     53        6
+
+Total preprocessing time (ms): 1911
+
+Theories: Types, GroebnerMultiplicationValueEnumerator, GroebnerMultiplication, ModuloArithmetic, ADT(DoubleFloatingPoint)
+State hashing enabled
+Forward  constant and interval propagation ++++++++++++++++++++++++++
+
+Backward constant and interval propagation ++++++++++++
+
+Unique satisfiable clauses: 32
+   1 clauses with 0 body literals
+   31 clauses with 1 body literals
+
+Starting CEGAR ...
+..................
+Found counterexample #1, refining ... (4and/0or)  38 -> 38 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_1_0 = 1023.\as[bv[11]]
+........
+Found counterexample #2, refining ... (4and/0or)  42 -> 42 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_4_0 = 1021.\as[bv[11]]
+..
+Found counterexample #3, refining ... (4and/0or)  55 -> 55 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_5_0 = 7205759403792794.\as[bv[53]]
+..
+Found counterexample #4, refining ... (4and/0or)  56 -> 56 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_2_0 = 4503599627370496.\as[bv[53]]
+..
+Found counterexample #5, refining ... (4and/0or)  57 -> 57 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_2_0 = 1023.\as[bv[11]]
+.
+Found counterexample #6, refining ... (4and/0or)  68 -> 68 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: !(<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_0_0 != 1 & <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_0_0 != -1)
+..........................
+Found counterexample #7, refining ... (8and/0or)  144 -> 144 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_5_0 = 1021.\as[bv[11]], <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_2_0 = 1021.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_1_0 = 1021.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block4_2_exp: <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_1_0 = 1021.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_1_0 = 1021.\as[bv[11]]
+.........................
+Found counterexample #8, refining ... (9and/0or)  156 -> 156 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp_7_0 = 0
+...............................
+Found counterexample #9, refining ... (10and/0or)  192 -> 192 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp_1_0 = 1021.\as[bv[11]]
+..
+Found counterexample #10, refining ... (8and/0or)  147 -> 147 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_2_0 = 7205759403792794.\as[bv[53]]
+<Main: void main(JayArray_java_lang_String)>_Block4_2_exp: <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_2_0 = 7205759403792794.\as[bv[53]]
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_2_0 = 7205759403792794.\as[bv[53]]
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_6_0 = 7205759403792794.\as[bv[53]]
+.................
+Found counterexample #11, refining ... (8and/0or)  146 -> 146 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_3_0 = 7205759403792794.\as[bv[53]]
+..................
+Found counterexample #12, refining ... (10and/0or)  204 -> 204 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp_2_0 = 7205759403792794.\as[bv[53]]
+....
+Found counterexample #13, refining ... (8and/0or)  145 -> 145 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_4_0 != <Main: void main(JayArray_java_lang_String)>_Block2_exp_1_0
+<Main: void main(JayArray_java_lang_String)>_Block4_2_exp: <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_4_0 != <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_1_0
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_4_0 = 3068.\as[bv[12]]
+.........................................
+Found counterexample #14, refining ... (14and/0or)  294 -> 294 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_1_0 = 2047.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block4_2_exp: <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_1_0 = 2047.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_1_0 = 2047.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_5_0 = 2047.\as[bv[11]]
+
+Found counterexample #15, refining ... (14and/0or)  309 -> 309 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: \exists int v0; (v0 != 0 & <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_5_0[54:54] = v0)
+................................
+Found counterexample #16, refining ... (12and/0or)  241 -> 241
+
+=== RUN 2 / 3 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+[root] - Safety Verification ... 
+[root] - Trying to verify with unbounded heap
+[root] - Hornify  ... 
+[root] - Transform Program Methods into Horn Clauses ... 
+[root] - Running from entry point: <Main: void main(JayArray_java_lang_String)>
+
+------------------------------- Preprocessing ----------------------------------
+                                                       #clauses  #relation syms
+Initially:                                             65        47
+After eliminating fwd/bwd unreachable clauses (25ms):  58        41
+After partial evaluation (80ms):                       58        41
+After constraint simplification (130ms):               58        41
+After clause inlining (116ms):                         23        6
+After equality propagation (88ms):                     23        6
+After constant propagation (49ms):                     23        6
+After inlining ADT constructors (123ms):               23        6
+After constraint simplification (176ms):               23        6
+After clause inlining (1ms):                           23        6
+After eliminating fwd/bwd unreachable clauses (1ms):   23        6
+After slicing (77ms):                                  23        6
+After Boolean clause splitting (1044ms):               54        6
+After equality propagation (16ms):                     54        6
+After constant propagation (47ms):                     54        6
+After constraint simplification (86ms):                53        6
+After clause inlining (3ms):                           53        6
+After eliminating fwd/bwd unreachable clauses (1ms):   53        6
+After slicing (6ms):                                   53        6
+After equality propagation (12ms):                     53        6
+After constant propagation (16ms):                     53        6
+After constraint simplification (29ms):                53        6
+After clause inlining (3ms):                           53        6
+After eliminating fwd/bwd unreachable clauses (1ms):   53        6
+After slicing (4ms):                                   53        6
+After cloning of relation symbols (42ms):              53        6
+After shortening of clauses (1ms):                     53        6
+
+Total preprocessing time (ms): 2317
+
+Theories: Types, GroebnerMultiplicationValueEnumerator, GroebnerMultiplication, ModuloArithmetic, ADT(DoubleFloatingPoint)
+State hashing enabled
+Forward  constant and interval propagation ++++++++++++++++++++++++++
+
+Backward constant and interval propagation ++++++++++++
+
+Unique satisfiable clauses: 32
+   1 clauses with 0 body literals
+   31 clauses with 1 body literals
+
+Starting CEGAR ...
+..................
+Found counterexample #1, refining ... (4and/0or)  38 -> 38 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_1_0 = 1023.\as[bv[11]]
+........
+Found counterexample #2, refining ... (4and/0or)  42 -> 42 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_4_0 = 1021.\as[bv[11]]
+..
+Found counterexample #3, refining ... (4and/0or)  55 -> 55 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_5_0 = 7205759403792794.\as[bv[53]]
+..
+Found counterexample #4, refining ... (4and/0or)  56 -> 56 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_2_0 = 4503599627370496.\as[bv[53]]
+..
+Found counterexample #5, refining ... (4and/0or)  57 -> 57 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_2_0 = 1023.\as[bv[11]]
+.
+Found counterexample #6, refining ... (4and/0or)  68 -> 68 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: !(<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_0_0 != 1 & <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_0_0 != -1)
+..........................
+Found counterexample #7, refining ... (8and/0or)  144 -> 144 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_5_0 = 1021.\as[bv[11]], <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_2_0 = 1021.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_1_0 = 1021.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block4_2_exp: <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_1_0 = 1021.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_1_0 = 1021.\as[bv[11]]
+.........................
+Found counterexample #8, refining ... (9and/0or)  156 -> 156 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp_7_0 = 0
+...............................
+Found counterexample #9, refining ... (10and/0or)  192 -> 192 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp_1_0 = 1021.\as[bv[11]]
+..
+Found counterexample #10, refining ... (8and/0or)  147 -> 147 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_2_0 = 7205759403792794.\as[bv[53]]
+<Main: void main(JayArray_java_lang_String)>_Block4_2_exp: <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_2_0 = 7205759403792794.\as[bv[53]]
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_2_0 = 7205759403792794.\as[bv[53]]
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_6_0 = 7205759403792794.\as[bv[53]]
+.................
+Found counterexample #11, refining ... (8and/0or)  146 -> 146 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_3_0 = 7205759403792794.\as[bv[53]]
+..................
+Found counterexample #12, refining ... (10and/0or)  204 -> 204 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp_2_0 = 7205759403792794.\as[bv[53]]
+....
+Found counterexample #13, refining ... (8and/0or)  145 -> 145 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_4_0 != <Main: void main(JayArray_java_lang_String)>_Block2_exp_1_0
+<Main: void main(JayArray_java_lang_String)>_Block4_2_exp: <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_4_0 != <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_1_0
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_4_0 = 3068.\as[bv[12]]
+.........................................
+Found counterexample #14, refining ... (14and/0or)  294 -> 294 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_1_0 = 2047.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block4_2_exp: <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_1_0 = 2047.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_1_0 = 2047.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_5_0 = 2047.\as[bv[11]]
+
+Found counterexample #15, refining ... (14and/0or)  309 -> 309 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: \exists int v0; (v0 != 0 & <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_5_0[54:54] = v0)
+................................
+Found counterexample #16, refining ... (12and/0or)  241 -> 241
+
+=== RUN 3 / 3 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+[root] - Safety Verification ... 
+[root] - Trying to verify with unbounded heap
+[root] - Hornify  ... 
+[root] - Transform Program Methods into Horn Clauses ... 
+[root] - Running from entry point: <Main: void main(JayArray_java_lang_String)>
+
+------------------------------- Preprocessing ----------------------------------
+                                                       #clauses  #relation syms
+Initially:                                             65        47
+After eliminating fwd/bwd unreachable clauses (132ms): 58        41
+After partial evaluation (478ms):                      58        41
+After constraint simplification (508ms):               58        41
+After clause inlining (290ms):                         23        6
+After equality propagation (209ms):                    23        6
+After constant propagation (227ms):                    23        6
+After inlining ADT constructors (603ms):               23        6
+After constraint simplification (300ms):               23        6
+After clause inlining (4ms):                           23        6
+After eliminating fwd/bwd unreachable clauses (1ms):   23        6
+After slicing (120ms):                                 23        6
+After Boolean clause splitting (2008ms):               54        6
+After equality propagation (43ms):                     54        6
+After constant propagation (55ms):                     54        6
+After constraint simplification (238ms):               53        6
+After clause inlining (1ms):                           53        6
+After eliminating fwd/bwd unreachable clauses (1ms):   53        6
+After slicing (16ms):                                  53        6
+After equality propagation (18ms):                     53        6
+After constant propagation (26ms):                     53        6
+After constraint simplification (46ms):                53        6
+After clause inlining (6ms):                           53        6
+After eliminating fwd/bwd unreachable clauses (1ms):   53        6
+After slicing (5ms):                                   53        6
+After cloning of relation symbols (131ms):             53        6
+After shortening of clauses (1ms):                     53        6
+
+Total preprocessing time (ms): 5882
+
+Theories: Types, GroebnerMultiplicationValueEnumerator, GroebnerMultiplication, ModuloArithmetic, ADT(DoubleFloatingPoint)
+State hashing enabled
+Forward  constant and interval propagation ++++++++++++++++++++++++++
+
+Backward constant and interval propagation ++++++++++++
+
+Unique satisfiable clauses: 32
+   1 clauses with 0 body literals
+   31 clauses with 1 body literals
+
+Starting CEGAR ...
+..................
+Found counterexample #1, refining ... (4and/0or)  38 -> 38 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_1_0 = 1023.\as[bv[11]]
+........
+Found counterexample #2, refining ... (4and/0or)  42 -> 42 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_4_0 = 1021.\as[bv[11]]
+..
+Found counterexample #3, refining ... (4and/0or)  55 -> 55 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_5_0 = 7205759403792794.\as[bv[53]]
+..
+Found counterexample #4, refining ... (4and/0or)  56 -> 56 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_2_0 = 4503599627370496.\as[bv[53]]
+..
+Found counterexample #5, refining ... (4and/0or)  57 -> 57 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_2_0 = 1023.\as[bv[11]]
+.
+Found counterexample #6, refining ... (4and/0or)  68 -> 68 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: !(<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_0_0 != 1 & <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_0_0 != -1)
+..........................
+Found counterexample #7, refining ... (8and/0or)  144 -> 144 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_5_0 = 1021.\as[bv[11]], <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_2_0 = 1021.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_1_0 = 1021.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block4_2_exp: <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_1_0 = 1021.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_1_0 = 1021.\as[bv[11]]
+.........................
+Found counterexample #8, refining ... (9and/0or)  156 -> 156 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp_7_0 = 0
+...............................
+Found counterexample #9, refining ... (10and/0or)  192 -> 192 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp_1_0 = 1021.\as[bv[11]]
+..
+Found counterexample #10, refining ... (8and/0or)  147 -> 147 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_2_0 = 7205759403792794.\as[bv[53]]
+<Main: void main(JayArray_java_lang_String)>_Block4_2_exp: <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_2_0 = 7205759403792794.\as[bv[53]]
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_2_0 = 7205759403792794.\as[bv[53]]
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_6_0 = 7205759403792794.\as[bv[53]]
+.................
+Found counterexample #11, refining ... (8and/0or)  146 -> 146 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_3_0 = 7205759403792794.\as[bv[53]]
+..................
+Found counterexample #12, refining ... (10and/0or)  204 -> 204 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_S_exp_2_0 = 7205759403792794.\as[bv[53]]
+....
+Found counterexample #13, refining ... (8and/0or)  145 -> 145 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_4_0 != <Main: void main(JayArray_java_lang_String)>_Block2_exp_1_0
+<Main: void main(JayArray_java_lang_String)>_Block4_2_exp: <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_4_0 != <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_1_0
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_4_0 = 3068.\as[bv[12]]
+.........................................
+Found counterexample #14, refining ... (14and/0or)  294 -> 294 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block2_exp: <Main: void main(JayArray_java_lang_String)>_Block2_exp_1_0 = 2047.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block4_2_exp: <Main: void main(JayArray_java_lang_String)>_Block4_2_exp_1_0 = 2047.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_1_0 = 2047.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block2_1-FCmpResult_exp_5_0 = 2047.\as[bv[11]]
+
+Found counterexample #15, refining ... (14and/0or)  309 -> 309 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp: \exists int v0; (v0 != 0 & <Main: void main(JayArray_java_lang_String)>_Block4_1_13_exp_5_0[54:54] = v0)
+................................
+Found counterexample #16, refining ... (12and/0or)  241 -> 241

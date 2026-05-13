@@ -1,0 +1,109 @@
+
+
+=== RUN 1 / 3 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+[root] - Safety Verification ... 
+[root] - Trying to verify with unbounded heap
+[root] - Hornify  ... 
+[root] - Transform Program Methods into Horn Clauses ... 
+
+
+=== RUN 2 / 3 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+[root] - Safety Verification ... 
+[root] - Trying to verify with unbounded heap
+[root] - Hornify  ... 
+[root] - Transform Program Methods into Horn Clauses ... 
+[root] - Running from entry point: <Main: void main(JayArray_java_lang_String)>
+
+------------------------------- Preprocessing ----------------------------------
+                                                       #clauses  #relation syms
+Initially:                                             127       75
+After eliminating fwd/bwd unreachable clauses (41ms):  120       69
+After partial evaluation (221ms):                      120       69
+After constraint simplification (314ms):               107       69
+After clause inlining (238ms):                         50        12
+After equality propagation (163ms):                    50        12
+After constant propagation (134ms):                    50        12
+After inlining ADT constructors (289ms):               50        12
+After constraint simplification (358ms):               45        12
+After clause inlining (0ms):                           45        12
+After eliminating fwd/bwd unreachable clauses (9ms):   45        12
+After slicing (119ms):                                 45        12
+After equality propagation (13ms):                     45        12
+After constant propagation (19ms):                     45        12
+After constraint simplification (50ms):                45        12
+After clause inlining (2ms):                           45        12
+After eliminating fwd/bwd unreachable clauses (2ms):   45        12
+After slicing (12ms):                                  45        12
+After Boolean clause splitting (474ms):                56        12
+After equality propagation (19ms):                     56        12
+After constant propagation (10ms):                     56        12
+After constraint simplification (76ms):                54        12
+After clause inlining (5ms):                           54        12
+After eliminating fwd/bwd unreachable clauses (1ms):   54        12
+After slicing (3ms):                                   54        12
+After equality propagation (8ms):                      54        12
+After constant propagation (7ms):                      54        12
+After constraint simplification (65ms):                53        12
+After clause inlining (2ms):                           53        12
+After eliminating fwd/bwd unreachable clauses (2ms):   53        12
+After slicing (21ms):                                  53        12
+After equality propagation (8ms):                      53        12
+After constant propagation (14ms):                     53        12
+After constraint simplification (95ms):                53        12
+After clause inlining (0ms):                           53        12
+After eliminating fwd/bwd unreachable clauses (0ms):   53        12
+After slicing (6ms):                                   53        12
+After cloning of relation symbols (71ms):              53        13
+After equality propagation (12ms):                     53        13
+After constant propagation (11ms):                     53        13
+After constraint simplification (20ms):                53        13
+After clause inlining (2ms):                           51        11
+After eliminating fwd/bwd unreachable clauses (1ms):   51        11
+After slicing (2ms):                                   51        11
+After equality propagation (7ms):                      51        11
+After constant propagation (6ms):                      51        11
+After constraint simplification (21ms):                51        11
+After clause inlining (1ms):                           51        11
+After eliminating fwd/bwd unreachable clauses (0ms):   51        11
+After slicing (2ms):                                   51        11
+After shortening of clauses (1ms):                     51        11
+
+Total preprocessing time (ms): 3227
+
+Theories: Types, GroebnerMultiplicationValueEnumerator, GroebnerMultiplication, ModuloArithmetic, ADT(DoubleFloatingPoint)
+State hashing enabled
+
+
+=== RUN 3 / 3 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+[root] - Safety Verification ... 
+[root] - Trying to verify with unbounded heap
+[root] - Hornify  ... 
+[root] - Transform Program Methods into Horn Clauses ... 
+[root] - Running from entry point: <Main: void main(JayArray_java_lang_String)>
+
+------------------------------- Preprocessing ----------------------------------
+                                                       #clauses  #relation syms
+Initially:                                             127       75
+After eliminating fwd/bwd unreachable clauses (34ms):  120       69
+After partial evaluation (278ms):                      120       69
+After constraint simplification (160ms):               107       69
+After clause inlining (372ms):                         50        12
+After equality propagation (137ms):                    50        12
+After constant propagation (76ms):                     50        12
+After inlining ADT constructors (343ms):               50        12
+After constraint simplification (735ms):               45        12
+After clause inlining (2ms):                           45        12
+After eliminating fwd/bwd unreachable clauses (34ms):  45        12
+After slicing (223ms):                                 45        12
+After equality propagation (178ms):                    45        12
+After constant propagation (34ms):                     45        12
+After constraint simplification (77ms):                45        12

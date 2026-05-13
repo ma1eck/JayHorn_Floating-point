@@ -1,0 +1,52 @@
+
+
+=== RUN 1 / 1 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+[root] - Safety Verification ... 
+[root] - Trying to verify with unbounded heap
+[root] - Hornify  ... 
+[root] - Transform Program Methods into Horn Clauses ... 
+[root] - Running from entry point: <Main: void main(JayArray_java_lang_String)>
+
+------------------------------- Preprocessing ----------------------------------
+                                                       #clauses  #relation syms
+Initially:                                             25        25
+After eliminating fwd/bwd unreachable clauses (17ms):  0         0
+
+Total preprocessing time (ms): 62
+
+Theories: Types
+Forward  constant and interval propagation 
+
+Backward constant and interval propagation 
+
+Unique satisfiable clauses: 0
+
+Starting CEGAR ...
+
+
+--------------------------------- Statistics -----------------------------------
+CEGAR iterations:                                      0
+Total CEGAR time (ms):                                 196
+Setup time (ms):                                       195
+Final number of abstract states:                       0
+Final number of matched abstract states:               0
+Final number of abstract edges:                        0
+Number of generated predicates:                        0
+Average predicate size (# of sub-formulas):            0.00
+Predicate generation time (ms):                        0
+Number of implication checks:                          0
+
+Number of implication checks (setup):                  0
+Number of implication checks (positive):               0
+Number of implication checks (negative):               0
+Time for implication checks (setup, ms):               0
+Time for implication checks (positive, ms):            0
+Time for implication checks (negative, ms):            0
+--------------------------------------------------------------------------------
+
+Eldarica takes 327ms to check the given benchmark!
+[root] - Program is SAFE
+SAFE

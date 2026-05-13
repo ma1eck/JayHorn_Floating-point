@@ -1,0 +1,122 @@
+
+
+=== RUN 1 / 3 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+[root] - Safety Verification ... 
+[root] - Trying to verify with unbounded heap
+[root] - Hornify  ... 
+[root] - Transform Program Methods into Horn Clauses ... 
+[root] - Running from entry point: <Main: void main(JayArray_java_lang_String)>
+
+------------------------------- Preprocessing ----------------------------------
+                                                       #clauses  #relation syms
+Initially:                                             133       76
+After eliminating fwd/bwd unreachable clauses (27ms):  126       70
+After partial evaluation (299ms):                      126       70
+After constraint simplification (563ms):               111       70
+After clause inlining (480ms):                         54        13
+After equality propagation (416ms):                    54        13
+After constant propagation (85ms):                     54        13
+After inlining ADT constructors (314ms):               54        13
+After constraint simplification (466ms):               52        13
+After clause inlining (2ms):                           52        13
+After eliminating fwd/bwd unreachable clauses (2ms):   52        13
+After slicing (99ms):                                  52        13
+After equality propagation (10ms):                     52        13
+After constant propagation (6ms):                      52        13
+After constraint simplification (52ms):                52        13
+After clause inlining (2ms):                           52        13
+After eliminating fwd/bwd unreachable clauses (0ms):   52        13
+After slicing (2ms):                                   52        13
+After Boolean clause splitting (1122ms):               69        13
+After equality propagation (23ms):                     69        13
+After constant propagation (26ms):                     69        13
+After constraint simplification (51ms):                68        13
+After clause inlining (22ms):                          68        13
+After eliminating fwd/bwd unreachable clauses (0ms):   68        13
+After slicing (4ms):                                   68        13
+After equality propagation (11ms):                     68        13
+After constant propagation (22ms):                     68        13
+After constraint simplification (28ms):                68        13
+After clause inlining (0ms):                           68        13
+After eliminating fwd/bwd unreachable clauses (2ms):   68        13
+After slicing (12ms):                                  68        13
+After cloning of relation symbols (31ms):              68        14
+After equality propagation (10ms):                     68        14
+After constant propagation (4ms):                      68        14
+After constraint simplification (22ms):                68        14
+After clause inlining (51ms):                          66        12
+After eliminating fwd/bwd unreachable clauses (2ms):   64        11
+After slicing (2ms):                                   64        11
+After equality propagation (16ms):                     64        11
+After constant propagation (6ms):                      64        11
+After constraint simplification (54ms):                64        11
+After clause inlining (2ms):                           64        11
+After eliminating fwd/bwd unreachable clauses (0ms):   64        11
+After slicing (6ms):                                   64        11
+After shortening of clauses (2ms):                     64        11
+
+Total preprocessing time (ms): 4581
+
+Theories: Types, GroebnerMultiplicationValueEnumerator, GroebnerMultiplication, ModuloArithmetic, ADT(DoubleFloatingPoint)
+State hashing enabled
+Forward  constant and interval propagation +++++++++++++++++++++++++++++++++++++++++
+
+Backward constant and interval propagation ++++++++++++++++
+
+Unique satisfiable clauses: 47
+   3 clauses with 0 body literals
+   44 clauses with 1 body literals
+
+Starting CEGAR ...
+.......................................
+Found counterexample #1, refining ... (6and/0or)  59 -> 58 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block3_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block3_1-FCmpResult_exp_2_0 = 1022.\as[bv[11]]
+<Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp_2_0 = 1022.\as[bv[11]]
+
+Found counterexample #2, refining ... (6and/0or)  72 -> 70 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block5_4_exp: <Main: void main(JayArray_java_lang_String)>_Block5_4_exp_2_0 = 4503599627370496.\as[bv[53]]
+
+Found counterexample #3, refining ... (7and/0or)  110 -> 109 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp: <Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp_2_0.\as[int] - <Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp_5_0.\as[int] >= 2
+<Main: void main(JayArray_java_lang_String)>_Block3_1-FCmpResult_exp: 1021 >= <Main: void main(JayArray_java_lang_String)>_Block3_1-FCmpResult_exp_2_0.\as[int]
+
+Found counterexample #4, refining ... (7and/0or)  111 -> 110 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp: <Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp_4_0 = <Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp_1_0
+
+Found counterexample #5, refining ... (7and/0or)  109 -> 108 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp_1_0 = 0
+..................................
+Found counterexample #6, refining ... (7and/0or)  107 -> 106 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp: <Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp_5_0.\as[int] - <Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp_2_0.\as[int] = 1
+
+Found counterexample #7, refining ... (7and/0or)  109 -> 108 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp: <Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp_5_0.\as[int] - <Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp_2_0.\as[int] >= 2
+...................................
+Found counterexample #8, refining ... (8and/0or)  122 -> 120 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block3_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block3_1-FCmpResult_exp_2_0.\as[int] >= 1023
+<Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp_2_0.\as[int] >= 1023
+..........................
+Found counterexample #9, refining ... (8and/0or)  119 -> 119 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp: <Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp_4_0 - <Main: void main(JayArray_java_lang_String)>_Block5_3_12_exp_1_0 = -1
+...................
+Found counterexample #10, refining ... (8and/0or)  114 -> 114 ... adding predicates:
+<Main: void main(JayArray_java_lang_String)>_Block3_1-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block3_1-FCmpResult_exp_3_0.\as[int] >= 9007199254740902
+<Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp: <Main: void main(JayArray_java_lang_String)>_Block1_11-FCmpResult_exp_3_0.\as[int] >= 9007199254740902
+...
+
+=== RUN 2 / 3 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+
+
+=== RUN 3 / 3 ===
+[root] - ---   JayHorn : Static Analyzer for Java Programs   --- 
+[root] - Horn solver: eldarica
+[root] - Building CFG  ... 
+[root] - Safety Verification ... 
+[root] - Trying to verify with unbounded heap
+[root] - Hornify  ... 
