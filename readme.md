@@ -42,6 +42,8 @@ The script is executed via `benchmark_runner.py`. It is recommended to run it in
 
 ### Examples
 
+#### PowerShell
+
 To run benchmarks in parallel with an 8-minute timeout and 3 repetitions on eldrica:
 
 ```bash
@@ -66,15 +68,25 @@ To run C-SVCOM, JAVA-SVCOM, and unbounded benchmarks:
 python benchmark_runner.py --benchmarks-dirs ".\examples\C-SVCOM" ".\examples\Java-SVCOM" ".\examples\sv-benchmarks-main-java-float_unboundedloop\float_unboundedloop" --timeout 30 --max-workers 1 --solver eldarica
 ```
 
+#### Runing on Linux
+
+To run benchmarks in parallel with an 8-minute timeout and 3 repetitions on eldrica:
+
+```bash
+python3 benchmark_runner.py --benchmarks-dirs ".\benchmarks" --jayhorn-jar ".\jayhorn.jar" --native-lib ".\native_libs" --max-workers 3 --timeout 480 --repetitions 3 --solver eldarica --output-csv output_table.csv
+```
+
+```bash
+python benchmark_runner.py --benchmarks-dirs "./examples/benchmarks" --jayhorn-jar "./jayhorn.jar" --native-lib
+"./native_libs" --max-workers 3 --timeout 480 --repetitions 3 --solver eldarica --output-csv output_table.csv
+```
+
 ## Output
 
 - **`benchmark_results.csv`**: Aggregated results (times, results, encodings).
 - **Log Files**: Individual `.txt` files in each benchmark folder containing the full JayHorn output.
 - **Counter-examples**: Saved to a subfolder within the benchmark directory if `--get-cex` is enabled (only in spacer).
 
-
-
-
-## Note: 
+## Note:
 
 Comprehensive results are provided in the Appendices. For reproduction, the timeout should be set to 3,600 seconds (1 hour). Please note that the estimated execution time for all benchmarks across various strategies using Eldarica and Spacer is approximately five days.

@@ -33,6 +33,7 @@ def run_single_benchmark(task_info, args):
 
     # Basic check to see if it's a valid benchmark folder
     if not (os.path.isdir(classes_dir) and os.path.isdir(src_dir)):
+        print(f"Skipped {folder_name}: Missing 'classes' or 'src' directory in {folder_path}")
         return None
 
     cmd = [
@@ -240,6 +241,7 @@ def parse_arguments():
 def main():
     """Main function to set up and run the benchmarks."""
     args = parse_arguments()
+    print(args)
     
     tasks = []
     benchmarks_to_run = set(args.select)
